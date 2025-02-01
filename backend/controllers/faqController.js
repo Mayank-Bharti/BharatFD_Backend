@@ -20,8 +20,8 @@ exports.getFAQs = async (req, res) => {
         const faqs = await FAQ.find();  // Ensure you have the correct model and connection
         console.log('Returning FAQs from MongoDB');
 
-        if (!faqs || faqs.length === 0) {
-            return res.status(404).json({ message: "No FAQs found in MongoDB." });
+        if (faqs.length === 0) {
+            return res.json([]);  // Return an empty array if no FAQs are found
         }
 
         // Map over FAQs and return translations based on the requested language
@@ -40,7 +40,7 @@ exports.getFAQs = async (req, res) => {
         });
 
         // Cache the fetched FAQs for 1 hour (3600 seconds)
-        await redisClient.setEx(cacheKey, 60, JSON.stringify(translatedFAQs));
+        await redisClient.setEx(cacheKey, 10, JSON.stringify(translatedFAQs));
 
         // Return the FAQs with translations
         res.json(translatedFAQs);
@@ -49,7 +49,6 @@ exports.getFAQs = async (req, res) => {
         res.status(500).json({ error: 'Server error: Unable to fetch FAQs' });
     }
 };
-
 
 // ✅ Controller to Create an FAQ with Translations (Store both original and translated questions/answers)
 exports.createFAQ = async (req, res) => {
@@ -133,7 +132,7 @@ exports.getFAQById = async (req, res) => {
         };
 
         // Cache the FAQ in Redis for 1 hour (3600 seconds)
-        //  await redisClient.setex(cacheKey, 3600, JSON.stringify(translatedFAQ));
+        await redisClient.setEx(cacheKey, 3600, JSON.stringify(translatedFAQ));
 
         // Return the FAQ
         res.json(translatedFAQ);
@@ -142,6 +141,7 @@ exports.getFAQById = async (req, res) => {
         res.status(500).json({ error: 'Server error: Unable to fetch FAQ' });
     }
 };
+
 // ✅ Controller to Delete an FAQ and Clear Redis Cache
 exports.deleteFAQ = async (req, res) => {
     try {
