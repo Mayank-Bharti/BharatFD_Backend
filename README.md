@@ -10,6 +10,7 @@ The API also caches FAQs using **Redis** to improve performance.
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
 - [Environment Variables](#environment-variables)
+- [API EndPoints](#api-endpoints)
 - [Project Structure!](#project-structure)
 - [Running the Server](#running-the-server)
 - [Vedio](#Vedio)
@@ -85,6 +86,91 @@ You need to configure your environment variables in the `.env` file at the root 
 - **Google Gemini API Key (for translations)**  
 
        `GEMINI_API_KEY=AIzaSyDVCEOMD_ngNlRIJ95knYshBDJqRdFnRoo`
+
+
+## API Endpoints
+
+### 1. **Fetch all FAQs with optional language translation**
+   - **Endpoint**: `GET /api/faqs`
+   - **Query Parameters**: 
+     - `lang`: (optional) Language code for the FAQ content (default: "en")
+   - **Description**: Fetch all FAQs, with an option to retrieve FAQs in a specified language.
+   - **Example Request**: 
+     ```bash
+     GET http://localhost:5000/api/faqs?lang=hi
+     ```
+   - **Response**:
+     ```
+     [
+    {
+        "id": 1,
+        "question": "आपकी वापसी नीति क्या है?",
+        "answer": "आप 30 दिनों के भीतर वस्तुओं को वापस कर सकते हैं।"
+    },
+    ]
+    ...
+
+     ```
+
+### 2. **Fetch a single FAQ by ID**
+   - **Endpoint**: `GET /api/faqs/{id}`
+   - **Query Parameters**: 
+     - `lang`: (optional) Language code for the FAQ content (default: "en")
+   - **Description**: Fetch a single FAQ based on its ID, with an option to retrieve it in a specified language.
+   - **Example Request**:
+     ```bash
+     GET http://localhost:5000/api/faqs/1?lang=en
+     ```
+   - **Response**:
+     ```json
+     {
+         "id": 1,
+         "question": "What is your return policy?",
+         "answer": "You can return items within 30 days."
+     }
+     ```
+
+### 3. **Create a new FAQ**
+   - **Endpoint**: `POST /api/faqs`
+   - **Request Body**:
+     ```json
+     {
+         "question": "What are your business hours?",
+         "answer": "Our business hours are from 9 AM to 6 PM, Monday to Friday."
+     }
+     ```
+   - **Description**: Create a new FAQ with a question and answer.
+   - **Example Request**:
+     ```bash
+     POST http://localhost:5000/api/faqs
+     ```
+   - **Response**:
+     ```json
+     {
+         "id": 2,
+         "question": "What are your business hours?",
+         "answer": "Our business hours are from 9 AM to 6 PM, Monday to Friday."
+     }
+     ```
+
+### 4. **Delete an FAQ by ID**
+   - **Endpoint**: `DELETE /api/faqs/{id}`
+   - **Description**: Delete an FAQ by its ID.
+   - **Example Request**:
+     ```bash
+     DELETE http://localhost:5000/api/faqs/2
+     ```
+   - **Response**:
+     ```json
+     {
+         "message": "FAQ deleted successfully"
+     }
+     ```
+
+## Notes
+- Make sure the backend server is running at `http://localhost:5000` (or update the `API_BASE_URL` accordingly).
+- Replace `id` with the actual FAQ ID when using the `GET /api/faqs/{id}` and `DELETE /api/faqs/{id}` endpoints.
+- 
 
 
 ##  📂Project Structure!
