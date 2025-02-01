@@ -6,11 +6,11 @@ The API also caches FAQs using **Redis** to improve performance.
 ---
 
 ## 📖 Table of Contents
-- [🎯 Features](#features)
-- [🛠 Technologies Used](#technologies-used)
-- [🔧 Installation](#installation)
-- [🌱 Environment Variables](#environment-variables)
-- [📂Project Structure!](#project-structure)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Environment Variables](#environment-variables)
+- [Project Structure!](#project-structure)
 - [API Endpoints](#api-endpoints)
 - [Translation Logic](#translation-logic)
 - [Redis Caching](#redis-caching)
@@ -19,7 +19,7 @@ The API also caches FAQs using **Redis** to improve performance.
 
 ---
 
-## 🎯 Features
+## Features
 ✅ Create FAQs with **automatic translation** (Hindi, English)  
 ✅ Fetch FAQs with **multilingual support**  
 ✅ **Redis caching** for faster retrieval  
@@ -28,7 +28,7 @@ The API also caches FAQs using **Redis** to improve performance.
 
 ---
 
-## 🛠 Technologies Used
+## Technologies Used
 - **Node.js** (Backend)
 - **Express.js** (Routing & API)
 - **MongoDB + Mongoose** (Database)
@@ -39,7 +39,7 @@ The API also caches FAQs using **Redis** to improve performance.
 
 ---
 
-## 🔧 Installation
+## Installation
 
 ### 1️⃣ Clone the repository
 
@@ -48,7 +48,7 @@ cd faq-api
 
 ---
 
-## 🌱 Environment Variables
+## Environment Variables
 
 You need to configure your environment variables in the `.env` file at the root of the project. Below are the necessary variables:
 
