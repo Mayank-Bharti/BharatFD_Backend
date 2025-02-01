@@ -48,13 +48,6 @@ cd faq-api
 
 ---
 
-##  📂Project Structure!
-
-[Screenshot 2025-02-01 215405](https://github.com/user-attachments/assets/70e05273-c559-42fc-835d-ee7c851eb8c1)
-
-
-## 🌱Environment Variables
-
 ## 🌱 Environment Variables
 
 You need to configure your environment variables in the `.env` file at the root of the project. Below are the necessary variables:
@@ -72,6 +65,10 @@ You need to configure your environment variables in the `.env` file at the root 
 - **Google Gemini API Key (for translations)**  
   `GEMINI_API_KEY=AIzaSyDVCEOMD_ngNlRIJ95knYshBDJqRdFnRoo`
  
+
+##  📂Project Structure!
+
+[Screenshot 2025-02-01 215405](https://github.com/user-attachments/assets/70e05273-c559-42fc-835d-ee7c851eb8c1)
 
 
 
