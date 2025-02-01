@@ -12,10 +12,7 @@ The API also caches FAQs using **Redis** to improve performance.
 - [Environment Variables](#environment-variables)
 - [Project Structure!](#project-structure)
 - [API Endpoints](#api-endpoints)
-- [Translation Logic](#translation-logic)
-- [Redis Caching](#redis-caching)
 - [Running the Server](#running-the-server)
-- [Example Request & Response](#example-request--response)
 
 ---
 
@@ -41,10 +38,24 @@ The API also caches FAQs using **Redis** to improve performance.
 
 ## Installation
 
-### 1️⃣ Clone the repository
+###  Clone the repository
 
 git clone https://github.com/Mayank-Bharti/BharatFD_Backend
-cd faq-api
+cd backend
+
+### Install Backend dependencies
+
+npm init -y
+npm install
+npm install express dotenv sequelize pg redis 
+npm install --save-dev nodemon mocha chai supertest eslint
+
+
+###  Initialize the Frontend and Instal Frontend dependencies
+
+npx create-react-app frontend
+cd frontend
+npm install axios react-router-dom @ckeditor/ckeditor5-react
 
 ---
 
@@ -64,11 +75,31 @@ You need to configure your environment variables in the `.env` file at the root 
 
 - **Google Gemini API Key (for translations)**  
   `GEMINI_API_KEY=AIzaSyDVCEOMD_ngNlRIJ95knYshBDJqRdFnRoo`
- 
+
 
 ##  📂Project Structure!
 
 [Screenshot 2025-02-01 215405](https://github.com/user-attachments/assets/70e05273-c559-42fc-835d-ee7c851eb8c1)
+
+## Running the Server
+
+### Backend
+       `nodemon server.js`
+
+### Frontend
+       `npm start`
+
+## Vedio
+
+## Screenshot
+
+![image](https://github.com/user-attachments/assets/b48e900b-1815-401d-8a64-b25762b9d051)
+
+![image](https://github.com/user-attachments/assets/2bc47ae9-389c-4f38-95eb-8dc79b06f211)
+
+![image](https://github.com/user-attachments/assets/748693ba-9f93-4b65-97d3-ac896ffc283d)
+
+
 
 
 
