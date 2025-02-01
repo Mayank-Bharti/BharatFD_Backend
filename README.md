@@ -46,7 +46,10 @@ The API also caches FAQs using **Redis** to improve performance.
 git clone https://github.com/Mayank-Bharti/BharatFD_Backend
 cd faq-api
 
+---
+
 ##  📂Project Structure
+
 BharatFD_Backend/
 │── backend/                  # Node.js/Express Server
 │   ├── config/               # Configuration files (DB, Redis, etc.)
