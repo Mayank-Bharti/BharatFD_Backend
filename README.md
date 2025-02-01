@@ -6,11 +6,11 @@ The API also caches FAQs using **Redis** to improve performance.
 ---
 
 ## 📖 Table of Contents
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [Environment Variables](#environment-variables)
-- [Project Structure](#project-structure)
+- [🎯 Features](#features)
+- [🛠 Technologies Used](#technologies-used)
+- [🔧 Installation](#installation)
+- [🌱 Environment Variables](#environment-variables)
+- [📂Project Structure!](#project-structure)
 - [API Endpoints](#api-endpoints)
 - [Translation Logic](#translation-logic)
 - [Redis Caching](#redis-caching)
