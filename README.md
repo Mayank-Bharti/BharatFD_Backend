@@ -1,6 +1,6 @@
 # FAQ Management API (with Translation & Redis Caching)
 
-This **FAQ Management API** allows users to create FAQs by providing only a **question**, which is automatically translated into **Hindi**, **Spanish**, and **Bengali** using the **Google Gemini API**.  
+This **FAQ Management System** allows users to create FAQs by providing only a **question**, which is automatically translated into **Hindi** and **English** using the **Google Gemini API**.  
 The API also caches FAQs using **Redis** to improve performance.
 
 ---
@@ -51,5 +51,22 @@ cd faq-api
 ##  📂Project Structure!
 
 [Screenshot 2025-02-01 215405](https://github.com/user-attachments/assets/70e05273-c559-42fc-835d-ee7c851eb8c1)
+
+
+## 🌱Environment Variables
+
+ - # Server Port
+ - PORT=5000
+
+- # MongoDB connection URL
+- MONGO_URI=mongodb://localhost:27017/faqdb
+
+- # Redis connection details
+- REDIS_HOST=127.0.0.1
+- REDIS_PORT=6379
+
+- # Google Gemini API Key (for translations)
+- GEMINI_API_KEY= AIzaSyDVCEOMD_ngNlRIJ95knYshBDJqRdFnRoo
+
 
 
