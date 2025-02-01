@@ -51,7 +51,7 @@ The API also caches FAQs using **Redis** to improve performance.
 
       `npm install`
       
-      `npm install express dotenv sequelize pg redis`
+      `npm install axios express dotenv sequelize pg redis`
       
       `npm install --save-dev nodemon mocha chai supertest eslint`
 
