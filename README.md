@@ -100,6 +100,7 @@ You need to configure your environment variables in the `.env` file at the root 
      GET http://localhost:5000/api/faqs?lang=hi
      ```
    - **Response**:
+
      ```
      [
     {
@@ -107,8 +108,9 @@ You need to configure your environment variables in the `.env` file at the root 
         "question": "आपकी वापसी नीति क्या है?",
         "answer": "आप 30 दिनों के भीतर वस्तुओं को वापस कर सकते हैं।"
     },
-    ]
+    
     ...
+    ]
 
      ```
 
