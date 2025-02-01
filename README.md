@@ -10,9 +10,9 @@ The API also caches FAQs using **Redis** to improve performance.
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
 - [Environment Variables](#environment-variables)
-- [API EndPoints](#api-endpoints)
 - [Project Structure!](#project-structure)
 - [Running the Server](#running-the-server)
+- [API EndPoints](#api-endpoints)
 - [Vedio](#Vedio)
 - [Screenshot](#Screenshot)
 
@@ -86,6 +86,33 @@ You need to configure your environment variables in the `.env` file at the root 
 - **Google Gemini API Key (for translations)**  
 
        `GEMINI_API_KEY=AIzaSyDVCEOMD_ngNlRIJ95knYshBDJqRdFnRoo`
+
+
+
+##  📂Project Structure!
+
+   ### Backend
+         
+![Screenshot 2025-02-01 231030](https://github.com/user-attachments/assets/ade62730-3f56-45a3-88ce-c0c6d7fcbdb1)
+
+   ### Frontend 
+
+ ![Screenshot 2025-02-01 231305](https://github.com/user-attachments/assets/b4366546-eba8-47c2-a668-41f04905ab6f)
+
+
+## Running the Server
+
+### Backend
+
+       `cd backend`
+       
+       `nodemon server.js`
+
+### Frontend
+
+       `cd frontend`
+       
+       `npm start`
 
 
 
@@ -177,32 +204,6 @@ You need to configure your environment variables in the `.env` file at the root 
 - Make sure the backend server is running at `http://localhost:5000` (or update the `API_BASE_URL` accordingly).
 - Replace `id` with the actual FAQ ID when using the `GET /api/faqs/{id}` and `DELETE /api/faqs/{id}` endpoints.
 - 
-
-
-##  📂Project Structure!
-
-   ### Backend
-         
-![Screenshot 2025-02-01 231030](https://github.com/user-attachments/assets/ade62730-3f56-45a3-88ce-c0c6d7fcbdb1)
-
-   ### Frontend 
-
- ![Screenshot 2025-02-01 231305](https://github.com/user-attachments/assets/b4366546-eba8-47c2-a668-41f04905ab6f)
-
-
-## Running the Server
-
-### Backend
-
-       `cd backend`
-       
-       `nodemon server.js`
-
-### Frontend
-
-       `cd frontend`
-       
-       `npm start`
 
 ## Vedio
 
