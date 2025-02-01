@@ -68,7 +68,7 @@ The API also caches FAQs using **Redis** to improve performance.
 
 ## Environment Variables
 
-You need to configure your environment variables in the `.env` file at the root of the project at ./backend . Below are the necessary variables:
+You need to configure your environment variables in the `.env` file at the root of the project at `./backend` . Below are the necessary variables:
 
 - **Server Port**  
 
