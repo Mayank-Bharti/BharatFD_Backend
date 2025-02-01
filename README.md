@@ -58,8 +58,6 @@ The API also caches FAQs using **Redis** to improve performance.
 
 ###  Initialize the Frontend and Instal Frontend dependencies
 
-    `npx create-react-app frontend`
-
     `cd frontend`
     
     `npm install axios react-router-dom @ckeditor/ckeditor5-react`
