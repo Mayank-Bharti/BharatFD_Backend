@@ -88,6 +88,7 @@ You need to configure your environment variables in the `.env` file at the root 
        `GEMINI_API_KEY=AIzaSyDVCEOMD_ngNlRIJ95knYshBDJqRdFnRoo`
 
 
+
 ## API Endpoints
 
 ### 1. **Fetch all FAQs with optional language translation**
@@ -97,21 +98,22 @@ You need to configure your environment variables in the `.env` file at the root 
    - **Description**: Fetch all FAQs, with an option to retrieve FAQs in a specified language.
    - **Example Request**: 
      ```bash
-     GET http://localhost:5000/api/faqs?lang=hi
+     curl -X GET "http://localhost:5000/api/faqs?lang=hi"
      ```
    - **Response**:
-
-     ```
+     ```json
      [
-    {
-        "id": 1,
-        "question": "आपकी वापसी नीति क्या है?",
-        "answer": "आप 30 दिनों के भीतर वस्तुओं को वापस कर सकते हैं।"
-    },
-    
-    ...
-    ]
-
+         {
+             "id": 1,
+             "question": "आपकी वापसी नीति क्या है?",
+             "answer": "आप 30 दिनों के भीतर वस्तुओं को वापस कर सकते हैं।"
+         },
+         {
+             "id": 2,
+             "question": "क्या आप ऑनलाइन भुगतान स्वीकार करते हैं?",
+             "answer": "हां, हम सभी प्रमुख क्रेडिट कार्ड और UPI भुगतान स्वीकार करते हैं।"
+         }
+     ]
      ```
 
 ### 2. **Fetch a single FAQ by ID**
@@ -121,7 +123,7 @@ You need to configure your environment variables in the `.env` file at the root 
    - **Description**: Fetch a single FAQ based on its ID, with an option to retrieve it in a specified language.
    - **Example Request**:
      ```bash
-     GET http://localhost:5000/api/faqs/1?lang=en
+     curl -X GET "http://localhost:5000/api/faqs/1?lang=en"
      ```
    - **Response**:
      ```json
@@ -144,7 +146,9 @@ You need to configure your environment variables in the `.env` file at the root 
    - **Description**: Create a new FAQ with a question and answer.
    - **Example Request**:
      ```bash
-     POST http://localhost:5000/api/faqs
+     curl -X POST "http://localhost:5000/api/faqs" \
+     -H "Content-Type: application/json" \
+     -d '{"question": "What are your business hours?", "answer": "Our business hours are from 9 AM to 6 PM, Monday to Friday."}'
      ```
    - **Response**:
      ```json
@@ -160,7 +164,7 @@ You need to configure your environment variables in the `.env` file at the root 
    - **Description**: Delete an FAQ by its ID.
    - **Example Request**:
      ```bash
-     DELETE http://localhost:5000/api/faqs/2
+     curl -X DELETE "http://localhost:5000/api/faqs/2"
      ```
    - **Response**:
      ```json
