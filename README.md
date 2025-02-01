@@ -92,7 +92,14 @@ You need to configure your environment variables in the `.env` file at the root 
 
 ##  📂Project Structure!
 
-[Screenshot 2025-02-01 215405](https://github.com/user-attachments/assets/70e05273-c559-42fc-835d-ee7c851eb8c1)
+   ### Backend
+         
+         ![Screenshot 2025-02-01 231030](https://github.com/user-attachments/assets/ade62730-3f56-45a3-88ce-c0c6d7fcbdb1)
+
+   ### Frontend 
+
+         ![Screenshot 2025-02-01 231305](https://github.com/user-attachments/assets/b4366546-eba8-47c2-a668-41f04905ab6f)
+
 
 ## Running the Server
 
