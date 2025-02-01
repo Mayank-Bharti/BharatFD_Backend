@@ -13,6 +13,8 @@ The API also caches FAQs using **Redis** to improve performance.
 - [Project Structure!](#project-structure)
 - [API Endpoints](#api-endpoints)
 - [Running the Server](#running-the-server)
+- [Vedio] (#Vedio)
+- [Screenshot](#Screenshot)
 
 ---
 
@@ -101,6 +103,8 @@ You need to configure your environment variables in the `.env` file at the root 
        `npm start`
 
 ## Vedio
+
+[Click here to open the Video](https://drive.google.com/file/d/1btP_Pp3iHDMuzsAD7K4LrhqFFC0mlp8X/view?usp=drive_link)
 
 ## Screenshot
 
