@@ -71,20 +71,21 @@ You need to configure your environment variables in the `.env` file at the root 
 
 - **Server Port**  
 
-     `PORT=5000`
+       `PORT=5000`
 
 - **MongoDB Connection URL**  
 
-    `MONGO_URI=mongodb://localhost:27017/faqdb`
+       `MONGO_URI=mongodb://localhost:27017/faqdb`
 
 - **Redis Connection Details**  
-      `REDIS_HOST=127.0.0.1`  
 
-      `REDIS_PORT=6379`
+       `REDIS_HOST=127.0.0.1`  
+
+       `REDIS_PORT=6379`
 
 - **Google Gemini API Key (for translations)**  
 
-     `GEMINI_API_KEY=AIzaSyDVCEOMD_ngNlRIJ95knYshBDJqRdFnRoo`
+       `GEMINI_API_KEY=AIzaSyDVCEOMD_ngNlRIJ95knYshBDJqRdFnRoo`
 
 
 ##  📂Project Structure!
