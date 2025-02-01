@@ -45,3 +45,43 @@ The API also caches FAQs using **Redis** to improve performance.
 ```sh
 git clone https://github.com/Mayank-Bharti/BharatFD_Backend
 cd faq-api
+
+##  📂Project Structure
+BharatFD_Backend/
+│── backend/                  # Node.js/Express Server
+│   ├── config/               # Configuration files (DB, Redis, etc.)
+│   │   ├── db.js             # MongoDB connection setup
+│   │   ├── redis.js          # Redis client setup
+│   │   ├── dotenvConfig.js   # Load environment variables
+│   │   ├── logger.js         # Winston logging setup
+│
+│   ├── controllers/          # API Controllers
+│   │   ├── faqController.js  # FAQ CRUD operations
+│   │   ├── authController.js # User authentication (optional)
+│
+│   ├── models/               # Mongoose Models
+│   │   ├── FAQ.js            # FAQ Schema
+│
+│   ├── routes/               # API Routes
+│   │   ├── faqRoutes.js      # Routes for FAQ API
+│
+│   ├── middlewares/          # Middleware (error handling, auth)
+│   │   ├── errorHandler.js   # Global error handling middleware
+│
+│   ├── services/             # Business logic (translation, caching)
+│   │   ├── translationService.js  # Google Gemini API Translation
+│   │   ├── redisClient.js         # Redis caching logic
+│
+│   ├── tests/                # Unit tests (Jest/Supertest)
+│   │   ├── faq.test.js       # Test cases for FAQ API
+│
+│   ├── utils/                # Utility functions
+│   │   ├── helperFunctions.js
+│
+│   ├── server.js             # Main Express server
+│   ├── package.json          # Dependencies
+│   ├── .env                  # Environment variables
+│
+│── README.md                 # Documentation
+│── .gitignore                # Git ignore files
+
