@@ -40,22 +40,28 @@ The API also caches FAQs using **Redis** to improve performance.
 
 ###  Clone the repository
 
-`git clone https://github.com/Mayank-Bharti/BharatFD_Backend`
-`cd backend`
+        `git clone https://github.com/Mayank-Bharti/BharatFD_Backend`
+        
+        `cd backend`
 
 ### Install Backend dependencies
 
-`npm init -y`
-`npm install`
-`npm install express dotenv sequelize pg redis`
-`npm install --save-dev nodemon mocha chai supertest eslint`
+      `npm init -y`
+
+      `npm install`
+      
+      `npm install express dotenv sequelize pg redis`
+      
+      `npm install --save-dev nodemon mocha chai supertest eslint`
 
 
 ###  Initialize the Frontend and Instal Frontend dependencies
 
-`npx create-react-app frontend`
-`cd frontend`
-`npm install axios react-router-dom @ckeditor/ckeditor5-react`
+    `npx create-react-app frontend`
+
+    `cd frontend`
+    
+    `npm install axios react-router-dom @ckeditor/ckeditor5-react`
 
 ---
 
