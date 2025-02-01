@@ -13,7 +13,7 @@ The API also caches FAQs using **Redis** to improve performance.
 - [Project Structure!](#project-structure)
 - [API Endpoints](#api-endpoints)
 - [Running the Server](#running-the-server)
-- [Vedio] (#Vedio)
+- [Vedio](#Vedio)
 - [Screenshot](#Screenshot)
 
 ---
