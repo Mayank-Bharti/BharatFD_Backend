@@ -1,4 +1,4 @@
-# FAQ Management API (with Translation & Redis Caching)
+# FAQ Management System (with Translation & Redis Caching)
 
 This **FAQ Management System** allows users to create FAQs by providing only a **question**, which is automatically translated into **Hindi** and **English** using the **Google Gemini API**.  
 The API also caches FAQs using **Redis** to improve performance.
