@@ -11,7 +11,6 @@ The API also caches FAQs using **Redis** to improve performance.
 - [Installation](#installation)
 - [Environment Variables](#environment-variables)
 - [Project Structure!](#project-structure)
-- [API Endpoints](#api-endpoints)
 - [Running the Server](#running-the-server)
 - [Vedio](#Vedio)
 - [Screenshot](#Screenshot)
@@ -104,9 +103,15 @@ You need to configure your environment variables in the `.env` file at the root 
 ## Running the Server
 
 ### Backend
+
+       `cd backend`
+       
        `nodemon server.js`
 
 ### Frontend
+
+       `cd frontend`
+       
        `npm start`
 
 ## Vedio
